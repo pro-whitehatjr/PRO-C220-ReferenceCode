@@ -78,14 +78,14 @@ $(function () {
     })
 
     $("#mute_button").click(function () {
-        const enabled = myVideo.getAudioTracks()[0].enabled;
+        const enabled = myStream.getAudioTracks()[0].enabled;
         if (enabled) {
-            myVideo.getAudioTracks()[0].enabled = false;
+            myStream.getAudioTracks()[0].enabled = false;
             html = `<i class="fas fa-microphone-slash"></i>`;
             $("#mute_button").toggleClass("background_red");
             $("#mute_button").html(html)
         } else {
-            myVideo.getAudioTracks()[0].enabled = true;
+            myStream.getAudioTracks()[0].enabled = true;
             html = `<i class="fas fa-microphone"></i>`;
             $("#mute_button").toggleClass("background_red");
             $("#mute_button").html(html)
@@ -93,14 +93,14 @@ $(function () {
     })
 
     $("#stop_video").click(function () {
-        const enabled = myVideo.getVideoTracks()[0].enabled;
+        const enabled = myStream.getVideoTracks()[0].enabled;
         if (enabled) {
-            myVideo.getVideoTracks()[0].enabled = false;
+            myStream.getVideoTracks()[0].enabled = false;
             html = `<i class="fas fa-video-slash"></i>`;
             $("#mute_button").toggleClass("background_red");
             $("#mute_button").html(html)
         } else {
-            myVideo.getVideoTracks()[0].enabled = true;
+            myStream.getVideoTracks()[0].enabled = true;
             html = `<i class="fas fa-video"></i>`;
             $("#mute_button").toggleClass("background_red");
             $("#mute_button").html(html)
